@@ -11937,88 +11937,8 @@ aside,
 
 
 
-/* CSS untuk Tabel */
-/* CSS untuk tampilan desktop */
-@media only screen and (min-width: 768px) {
-  .ace-table {
-    max-width: 100%;
-  }
-}
-
-/* CSS untuk tampilan mobile */
-@media only screen and (max-width: 767px) {
-  .ace-table {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* CSS untuk mengubah ukuran gambar */
-.jadwal {
-  overflow-x: auto;
-}
-
-.table-responsive {
-  overflow-x: auto;
-}
-
-.jadwal table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.jadwal th, .jadwal td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.jadwal th {
-  background-color: red;
-  color: white;
-}
 
 
-.ace-table img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-.ace-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px; /* Sesuaikan dengan kebutuhan Anda */
-}
-
-/* CSS untuk Kolom */
-.ace-table th, .ace-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-/* CSS untuk Baris Ganjil */
-.ace-table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-
-/* CSS untuk Baris Hover */
-.ace-table tbody tr:hover {
-  background-color: #ddd;
-}
-
-/* CSS untuk Scroll di Perangkat Seluler */
-.tb-scrollable-children {
-  overflow-x: auto;
-}
-
-/* CSS untuk Responsif di Perangkat Seluler */
-@media (max-width: 600px) {
-  .ace-table th, .ace-table td {
-    font-size: 14px; /* Sesuaikan dengan kebutuhan Anda */
-  }
-}
 
 .editor-core-panel .xgplayer video {
   height: 100%;
@@ -12195,39 +12115,7 @@ aside,
   color: #333;
 }
 
-/* Table Styles */
-table {
-  width: 80%; /* Width of the table */
-  margin: 0 auto; /* Center the table */
-  border-collapse: collapse; /* Merge borders */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
 
-th, td {
-  padding: 15px; /* Padding inside table cells */
-  border: 1px solid #ccc; /* Border around cells */
-}
-
-th {
-  background-color: #007bff; /* Header background color */
-  color: white; /* Header text color */
-  font-weight: bold; /* Header font weight */
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternating row color */
-}
-
-tbody tr:hover {
-  background-color: #eaeaea; /* Hover effect for rows */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  table {
-      width: 100%; /* Full width on mobile */
-  }
-}
 
 
 /* H1 Styles */
@@ -12263,3 +12151,110 @@ tbody tr:hover {
       padding: 8px 16px; /* Menyesuaikan padding di perangkat kecil */
   }
 }
+
+
+/* Gaya Umum untuk Tabel */
+.docx-table-inner-wrapper {
+  overflow-x: auto; /* Memungkinkan scroll horizontal pada tabel */
+  margin: 20px 0; /* Margin atas dan bawah untuk ruang */
+}
+
+/* Gaya untuk Tabel */
+.table {
+  width: 100%; /* Membuat tabel penuh lebar */
+  border-collapse: collapse; /* Menghilangkan jarak antar border sel */
+}
+
+/* Gaya untuk Header Tabel */
+.table-header {
+  background-color: #f2f2f2; /* Warna latar belakang untuk header */
+  text-align: left; /* Mengatur teks ke kiri */
+  padding: 10px; /* Ruang dalam sel */
+  font-weight: bold; /* Membuat teks header tebal */
+}
+
+/* Gaya untuk Sel Tabel */
+.table-cell-block {
+  padding: 10px; /* Ruang dalam sel */
+  border: 1px solid #ddd; /* Border untuk sel */
+  background-color: #fff; /* Warna latar belakang sel */
+}
+
+/* Gaya untuk Sel dengan Fokus */
+.table-cell-block:focus {
+  outline: none; /* Menghilangkan outline default saat fokus */
+  background-color: #e7f3fe; /* Warna latar belakang saat fokus */
+}
+
+/* Gaya untuk Baris Pertama Tabel */
+.first-row {
+  background-color: #e0e0e0; /* Warna latar belakang baris pertama */
+}
+
+/* Gaya Responsif untuk Tabel */
+@media (max-width: 768px) {
+  .table {
+      display: block; /* Mengubah tabel menjadi block pada layar kecil */
+      overflow-x: auto; /* Memungkinkan scroll horizontal */
+  }
+  .table-header {
+      display: none; /* Menyembunyikan header pada perangkat kecil */
+  }
+  .table-cell-block {
+      display: block; /* Mengubah sel menjadi block */
+      width: 100%; /* Mengatur lebar sel menjadi penuh */
+  }
+}
+
+/* Gaya untuk Teks Highlight */
+.text-highlight-background {
+  background-color: #ffeb3b; /* Warna latar belakang untuk teks yang disorot */
+}
+
+
+/* CSS umum untuk tabel */
+.table-wrapper {
+  overflow-x: auto; /* Agar tabel dapat digeser secara horizontal */
+  margin: 20px; /* Jarak luar */
+}
+
+.table {
+  width: 100%; /* Memastikan tabel mengambil lebar penuh */
+  border-collapse: collapse; /* Menggabungkan batas tabel */
+}
+
+.table th, .table td {
+  padding: 12px; /* Padding di dalam sel */
+  text-align: left; /* Rata kiri untuk teks */
+  border: 1px solid #ddd; /* Batas sel */
+  word-wrap: break-word; /* Memungkinkan kata dipecah jika terlalu panjang */
+  overflow: hidden; /* Menghindari overflow isi */
+}
+
+/* Menambahkan batas maksimal untuk tabel */
+.table th {
+  max-width: 200px; /* Batas lebar maksimum untuk header */
+}
+
+.table td {
+  max-width: 300px; /* Batas lebar maksimum untuk sel */
+}
+
+/* Media Query untuk perangkat mobile */
+@media (max-width: 768px) {
+  .table {
+    min-width: 600px; /* Minimum lebar tabel untuk memastikan tabel dapat digeser */
+  }
+}
+
+/* Media Query untuk desktop */
+@media (min-width: 769px) {
+  .table {
+    width: auto; /* Lebar otomatis di desktop */
+  }
+  
+  .table th, .table td {
+    padding: 16px; /* Padding lebih besar di desktop */
+  }
+}
+
