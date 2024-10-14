@@ -12153,108 +12153,110 @@ aside,
 }
 
 
-/* Gaya Umum untuk Tabel */
-.docx-table-inner-wrapper {
-  overflow-x: auto; /* Memungkinkan scroll horizontal pada tabel */
-  margin: 20px 0; /* Margin atas dan bawah untuk ruang */
+/* Reset Default Styles */
+body, h1, h2, h3, h4, p, ul, li, table {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* Gaya untuk Tabel */
+.container {
+  max-width: 1200px; /* Atur lebar maksimal kontainer */
+  margin: 0 auto; /* Pusatkan kontainer */
+  padding: 0 15px; /* Tambahkan padding di kiri dan kanan */
+}
+
+/* Header Styles */
+.header-area {
+  background-color: #fff; /* Ganti sesuai dengan warna latar belakang */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+.menu-area {
+  display: flex;
+  justify-content: space-between; /* Pusatkan menu secara horizontal */
+  align-items: center; /* Pusatkan konten secara vertikal */
+  padding: 15px 0;
+}
+
+.main-menu {
+  display: flex;
+}
+
+.main-menu li {
+  margin: 0 15px; /* Tambahkan jarak antar item menu */
+}
+
+/* Table Styles */
 .table {
-  width: 100%; /* Membuat tabel penuh lebar */
-  border-collapse: collapse; /* Menghilangkan jarak antar border sel */
-}
-
-/* Gaya untuk Header Tabel */
-.table-header {
-  background-color: #f2f2f2; /* Warna latar belakang untuk header */
-  text-align: left; /* Mengatur teks ke kiri */
-  padding: 10px; /* Ruang dalam sel */
-  font-weight: bold; /* Membuat teks header tebal */
-}
-
-/* Gaya untuk Sel Tabel */
-.table-cell-block {
-  padding: 10px; /* Ruang dalam sel */
-  border: 1px solid #ddd; /* Border untuk sel */
-  background-color: #fff; /* Warna latar belakang sel */
-}
-
-/* Gaya untuk Sel dengan Fokus */
-.table-cell-block:focus {
-  outline: none; /* Menghilangkan outline default saat fokus */
-  background-color: #e7f3fe; /* Warna latar belakang saat fokus */
-}
-
-/* Gaya untuk Baris Pertama Tabel */
-.first-row {
-  background-color: #e0e0e0; /* Warna latar belakang baris pertama */
-}
-
-/* Gaya Responsif untuk Tabel */
-@media (max-width: 768px) {
-  .table {
-      display: block; /* Mengubah tabel menjadi block pada layar kecil */
-      overflow-x: auto; /* Memungkinkan scroll horizontal */
-  }
-  .table-header {
-      display: none; /* Menyembunyikan header pada perangkat kecil */
-  }
-  .table-cell-block {
-      display: block; /* Mengubah sel menjadi block */
-      width: 100%; /* Mengatur lebar sel menjadi penuh */
-  }
-}
-
-/* Gaya untuk Teks Highlight */
-.text-highlight-background {
-  background-color: #ffeb3b; /* Warna latar belakang untuk teks yang disorot */
-}
-
-
-/* CSS umum untuk tabel */
-.table-wrapper {
-  overflow-x: auto; /* Agar tabel dapat digeser secara horizontal */
-  margin: 20px; /* Jarak luar */
-}
-
-.table {
-  width: 100%; /* Memastikan tabel mengambil lebar penuh */
-  border-collapse: collapse; /* Menggabungkan batas tabel */
+  width: 100%; /* Lebar penuh untuk tabel */
+  border-collapse: collapse; /* Menghapus jarak antar sel */
 }
 
 .table th, .table td {
-  padding: 12px; /* Padding di dalam sel */
-  text-align: left; /* Rata kiri untuk teks */
-  border: 1px solid #ddd; /* Batas sel */
-  word-wrap: break-word; /* Memungkinkan kata dipecah jika terlalu panjang */
-  overflow: hidden; /* Menghindari overflow isi */
+  padding: 10px; /* Tambahkan padding dalam sel */
+  border: 1px solid #ddd; /* Tambahkan batas */
 }
 
-/* Menambahkan batas maksimal untuk tabel */
-.table th {
-  max-width: 200px; /* Batas lebar maksimum untuk header */
+/* Banner Styles */
+.banner-area {
+  text-align: center; /* Pusatkan teks */
+  padding: 60px 20px; /* Tambahkan padding */
+  background-color: #f8f9fa; /* Ganti dengan warna latar belakang yang diinginkan */
 }
 
-.table td {
-  max-width: 300px; /* Batas lebar maksimum untuk sel */
+.banner-title {
+  font-size: 2.5rem; /* Ukuran font untuk banner */
+  margin-bottom: 20px; /* Tambahkan jarak di bawah judul */
 }
 
-/* Media Query untuk perangkat mobile */
+/* Footer Styles */
+.footer-area {
+  background-color: #222; /* Ganti dengan warna footer yang diinginkan */
+  color: #fff; /* Warna teks footer */
+  padding: 40px 0; /* Tambahkan padding */
+}
+
+.footer-area h4 {
+  margin-bottom: 20px; /* Jarak di bawah judul footer */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .table {
-    min-width: 600px; /* Minimum lebar tabel untuk memastikan tabel dapat digeser */
+  .menu-area {
+      flex-direction: column; /* Mengubah arah flex menjadi kolom pada HP */
+      align-items: flex-start; /* Rata kiri pada HP */
+  }
+
+  .main-menu {
+      flex-direction: column; /* Mengubah arah menu menjadi kolom */
+  }
+
+  .main-menu li {
+      margin: 10px 0; /* Tambahkan jarak vertikal */
+  }
+
+  .banner-title {
+      font-size: 2rem; /* Ukuran font lebih kecil pada HP */
+  }
+
+  .footer-area {
+      padding: 20px 0; /* Mengurangi padding pada footer di HP */
+  }
+
+  .table-wrapper {
+      overflow-x: auto; /* Memungkinkan scroll horizontal pada tabel di HP */
   }
 }
 
-/* Media Query untuk desktop */
-@media (min-width: 769px) {
-  .table {
-    width: auto; /* Lebar otomatis di desktop */
+/* Desain untuk tablet */
+@media (max-width: 1024px) {
+  .banner-title {
+      font-size: 2.2rem; /* Ukuran font lebih kecil pada tablet */
   }
-  
-  .table th, .table td {
-    padding: 16px; /* Padding lebih besar di desktop */
+
+  .main-menu li {
+      margin: 0 10px; /* Mengurangi jarak antar item menu */
   }
 }
 
