@@ -83,18 +83,23 @@
             align-items: center;
         }
 
+        /* Logo sebagai gambar */
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #667eea;
-            text-decoration: none;
             display: flex;
             align-items: center;
+            text-decoration: none;
             gap: 10px;
         }
 
-        .logo i {
-            font-size: 2rem;
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -807,7 +812,6 @@
             max-width: 100%;
             max-height: 80px;
             object-fit: contain;
-            /* HAPUS FILTER INI: filter: brightness(0) invert(1); */
             transition: all 0.3s;
         }
 
@@ -1030,8 +1034,8 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <i class="fab fa-tiktok"></i>
-                VIP<span>Agency</span>
+                <!-- Ganti dengan gambar logo VIP Agency Anda -->
+                <img src="images/logo.png" alt="VIP Agency" class="logo-img">
             </a>
             <nav>
                 <ul class="nav-links">
@@ -1139,7 +1143,7 @@
                                 <span class="stat-label">Streamers Sukses</span>
                             </div>
                         </div>
-                        <p class="member-bio">Ex-TikTok algorithm specialist dengan passion membantu creator meraih impian mereka.</p>
+                        <p class="member-bio">Menjadi yang terbaik di Indonesia, tidak hanya di TikTok, tetapi juga di aplikasi lainnya. Pada tahun 2025,</p>
                     </div>
                 </div>
 
@@ -1195,7 +1199,7 @@
                 <div class="team-member">
                     <div class="member-header">
                         <div class="member-avatar">
-                            <img src="/images/april.jpg" alt="April">
+                            <img src="/images/april.jpeg" alt="April">
                         </div>
                         <div class="member-name">April</div>
                         <div class="member-role">Content Director</div>
@@ -1211,7 +1215,7 @@
                                 <span class="stat-label">Tahun Experience</span>
                             </div>
                         </div>
-                        <p class="member-bio">Content creator veteran yang paham betul rahasia konten viral di TikTok.</p>
+                        <p class="member-bio">Jadikan Tiktok Sebagai Cuan Tambahan Anda Sekarang Juga.</p>
                     </div>
                 </div>
 
@@ -1235,7 +1239,7 @@
                                 <span class="stat-label">Tahun Experience</span>
                             </div>
                         </div>
-                        <p class="member-bio">Content creator veteran yang paham betul rahasia konten viral di TikTok.</p>
+                        <p class="member-bio">From Zero to Hero.</p>
                     </div>
                 </div>
             </div>
@@ -1297,11 +1301,11 @@
                 <div class="member-card">
                     <div class="member-card-header">
                         <div class="member-card-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face" alt="Bella Live">
+                            <img src="/images/mita.jpeg" alt="Bella Live">
                         </div>
-                        <div class="member-card-name">@BellaLive</div>
+                        <div class="member-card-name">@smart_woman14</div>
                         <div class="member-card-stats">
-                            <span>2.5M Followers</span>
+                            <span>32.2K Followers</span>
                         </div>
                     </div>
                     <div class="member-card-info">
@@ -1323,11 +1327,11 @@
                 <div class="member-card">
                     <div class="member-card-header">
                         <div class="member-card-avatar">
-                            <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face" alt="Gaming Pro">
+                            <img src="/images/licha.jpeg" alt="Gaming Pro">
                         </div>
-                        <div class="member-card-name">@GamingPro</div>
+                        <div class="member-card-name">@lichar45</div>
                         <div class="member-card-stats">
-                            <span>1.8M Followers</span>
+                            <span>74.5K Followers</span>
                         </div>
                     </div>
                     <div class="member-card-info">
@@ -1349,11 +1353,63 @@
                 <div class="member-card">
                     <div class="member-card-header">
                         <div class="member-card-avatar">
-                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face" alt="Dance Queen">
+                            <img src="/images/bu_qori2.jpeg" alt="Dance Queen">
                         </div>
-                        <div class="member-card-name">@DanceQueen</div>
+                        <div class="member-card-name">@bu_qori2</div>
                         <div class="member-card-stats">
-                            <span>3.2M Followers</span>
+                            <span>12.7K Followers</span>
+                        </div>
+                    </div>
+                    <div class="member-card-info">
+                        <div class="member-growth">
+                            <div class="growth-item">
+                                <span class="growth-value">20K</span>
+                                <span class="growth-label">Avg Viewer</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-value">8M</span>
+                                <span class="growth-label">Diamond/Bulan</span>
+                            </div>
+                        </div>
+                        <p class="member-testimonial">"VIP Agency mengubah hobi jadi karir yang profitable. Semua GRATIS dan sangat membantu!"</p>
+                    </div>
+                </div>
+
+                <!-- Dance Queen -->
+                <div class="member-card">
+                    <div class="member-card-header">
+                        <div class="member-card-avatar">
+                            <img src="/images/bib.jpeg" alt="Dance Queen">
+                        </div>
+                        <div class="member-card-name">@bibbakar</div>
+                        <div class="member-card-stats">
+                            <span>42.2K Followers</span>
+                        </div>
+                    </div>
+                    <div class="member-card-info">
+                        <div class="member-growth">
+                            <div class="growth-item">
+                                <span class="growth-value">20K</span>
+                                <span class="growth-label">Avg Viewer</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-value">8M</span>
+                                <span class="growth-label">Diamond/Bulan</span>
+                            </div>
+                        </div>
+                        <p class="member-testimonial">"VIP Agency mengubah hobi jadi karir yang profitable. Semua GRATIS dan sangat membantu!"</p>
+                    </div>
+                </div>
+
+                <!-- Dance Queen -->
+                <div class="member-card">
+                    <div class="member-card-header">
+                        <div class="member-card-avatar">
+                            <img src="/images/moy.jpeg" alt="Dance Queen">
+                        </div>
+                        <div class="member-card-name">@moy.083</div>
+                        <div class="member-card-stats">
+                            <span>32.5K Followers</span>
                         </div>
                     </div>
                     <div class="member-card-info">
