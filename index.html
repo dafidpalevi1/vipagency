@@ -233,7 +233,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #000000, #000000);
             color: white;
             padding: 18px 40px;
             border-radius: 50px;
@@ -768,7 +768,7 @@
             opacity: 0.9;
         }
 
-        /* Partner Section - DIPINDAHKAN KE BAWAH */
+        /* Partner Section - DIPERBAIKI */
         .partners-section {
             background: rgba(10, 10, 10, 0.9);
             text-align: center;
@@ -802,16 +802,17 @@
             box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
         }
 
+        /* PERBAIKAN UTAMA: Hapus filter yang membuat gambar putih */
         .partner-logo img {
             max-width: 100%;
-            max-height: 60px;
+            max-height: 80px;
             object-fit: contain;
-            filter: brightness(0) invert(1);
-            transition: filter 0.3s;
+            /* HAPUS FILTER INI: filter: brightness(0) invert(1); */
+            transition: all 0.3s;
         }
 
         .partner-logo:hover img {
-            filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+            transform: scale(1.1);
         }
 
         /* Footer */
@@ -1065,7 +1066,9 @@
                     GRATIS 100% - TANPA BIAYA
                 </div>
                 <h1>Agency TikTok Live GRATIS</h1>
-                <p>Gabung agency TikTok Live pertama yang 100% GRATIS tanpa biaya pendaftaran, tanpa biaya bulanan, tanpa hidden cost!</p>
+                <p>Agensi TikTok LIVE terdiri dari para pakar agensi yang memungkinkan para kreator untuk bertumbuh dan mewujudkan impian mereka di TikTok LIVE dengan menyediakan strategi yang dipersonalisasi, sesi pembinaan, dan umpan balik aktif.
+
+                </p>
                 <p>Kami percaya kesuksesan harus bisa diakses semua orang</p>
                 <div class="tiktok-badge">
                     <i class="fab fa-tiktok"></i>
@@ -1073,7 +1076,7 @@
                 </div>
                 <a href="https://www.tiktok.com/t/ZMhhYfPCA/" class="cta-button" target="_blank">
                     <i class="fab fa-tiktok"></i>
-                    Daftar Gratis di TikTok
+                    Gabung Agency di TikTok
                 </a>
             </div>
         </div>
@@ -1245,7 +1248,7 @@
             <h2 class="section-title">Video Sukses Member</h2>
             <div class="videos-grid">
                 <div class="video-container">
-                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop') center/cover;">
+                    <div class="video-placeholder" style="background: url('images/download.jpg') center/cover;">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="video-info">
@@ -1257,7 +1260,7 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=300&fit=crop') center/cover;">
+                    <div class="video-placeholder" style="background: url('images/2.jpg') center/cover;">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="video-info">
@@ -1269,7 +1272,7 @@
                     </div>
                 </div>
                 <div class="video-container">
-                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=400&h=300&fit=crop') center/cover;">
+                    <div class="video-placeholder" style="background: url('images/3.jpg') center/cover;">
                         <i class="fas fa-play-circle"></i>
                     </div>
                     <div class="video-info">
@@ -1423,7 +1426,7 @@
         </div>
     </section>
 
-    <!-- Partner Section - DIPINDAHKAN KE PALING BAWAH -->
+    <!-- Partner Section - DIPERBAIKI -->
     <section class="section partners-section" id="partners">
         <div class="container">
             <h2 class="section-title">Partner Kami</h2>
@@ -1431,19 +1434,19 @@
                 <!-- VINS Group -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo VINS Group -->
-                    <img src="images/vip.png" alt="VINS Group">
+                    <img src="images/vin.png" alt="VINS Group">
                 </div>
                 
                 <!-- Partner 1 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 1 -->
-                    <img src="images/vip.png" alt="Partner 1">
+                    <img src="images/vmf.png" alt="Partner 1">
                 </div>
                 
                 <!-- Partner 2 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 2 -->
-                    <img src="images/vip.png" alt="Partner 2">
+                    <img src="images/mvf.png" alt="Partner 2">
                 </div>
                 
                 <!-- Partner 3 -->
@@ -1455,25 +1458,37 @@
                 <!-- Partner 4 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 4 -->
-                    <img src="images/vip.png" alt="Partner 4">
+                    <img src="images/vca.png" alt="Partner 4">
                 </div>
                 
                 <!-- Partner 5 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 5 -->
-                    <img src="images/vip.png" alt="Partner 5">
+                    <img src="images/vem.png" alt="Partner 5">
                 </div>
                 
                 <!-- Partner 6 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 6 -->
-                    <img src="images/vip.png" alt="Partner 6">
+                    <img src="images/vthi.png" alt="Partner 6">
                 </div>
 
                 <!-- Partner 7 -->
                 <div class="partner-logo">
                     <!-- Ganti dengan logo partner 7 -->
-                    <img src="images/vip.png" alt="Partner 7">
+                    <img src="images/mvm.png" alt="Partner 7">
+                </div>
+
+                <!-- Partner 8 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 8 -->
+                    <img src="images/vom.png" alt="Partner 8">
+                </div>
+
+                <!-- Partner 9 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 9 -->
+                    <img src="images/hvs.png" alt="Partner 9">
                 </div>
             </div>
         </div>
