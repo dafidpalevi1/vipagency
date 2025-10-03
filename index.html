@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Agency - TikTok Live Streaming GRATIS</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Background Animation */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #667eea, #764ba2, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(118, 75, 162, 0.2) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #667eea;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            text-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .free-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .free-badge::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); }
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tiktok-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 1px solid rgba(102, 126, 234, 0.5);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: floatElement 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; color: #667eea; }
+        .floating-element:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; color: #764ba2; }
+        .floating-element:nth-child(3) { top: 80%; left: 20%; animation-delay: 2s; color: #667eea; }
+        .floating-element:nth-child(4) { top: 40%; left: 90%; animation-delay: 3s; color: #764ba2; }
+        .floating-element:nth-child(5) { top: 10%; left: 70%; animation-delay: 4s; color: #667eea; }
+
+        @keyframes floatElement {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        /* Sections Common Styles */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Why Free Section */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .reason-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .reason-card:hover::before {
+            left: 100%;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .reason-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reason-card h3 {
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .reason-card p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .member-header {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+            position: relative;
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 0 auto 1rem;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* PERBAIKAN: CSS untuk gambar avatar */
+        .member-avatar img,
+        .member-card-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .member-avatar .avatar-placeholder {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .member-info {
+            padding: 2rem;
+        }
+
+        .member-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .member-bio {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Video Section */
+        .videos-section {
+            background: rgba(10, 10, 10, 0.9);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+            background: #000;
+        }
+
+        .video-container:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .video-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Success Members Section */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .member-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .member-card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+            position: relative;
+        }
+
+        .member-card-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 0 auto 1rem;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .member-card-avatar .avatar-placeholder {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .member-card-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-card-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .member-card-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .member-growth {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .growth-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .growth-value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #764ba2;
+            display: block;
+        }
+
+        .growth-label {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        .member-testimonial {
+            color: #ccc;
+            font-style: italic;
+            line-height: 1.6;
+            border-left: 3px solid #667eea;
+            padding-left: 1rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(118, 75, 162, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #764ba2;
+            box-shadow: 0 20px 40px rgba(118, 75, 162, 0.2);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .service-card p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Join Section */
+        .join {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .join-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .join h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .join p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        /* Partner Section - DIPINDAHKAN KE BAWAH */
+        .partners-section {
+            background: rgba(10, 10, 10, 0.9);
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .partner-logo {
+            width: 180px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s;
+        }
+
+        .partner-logo:hover img {
+            filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 60px 0 30px;
+            text-align: center;
+            border-top: 1px solid #333;
+            backdrop-filter: blur(20px);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .heart {
+            color: #ff6b6b;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+                backdrop-filter: blur(20px);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .join h2 {
+                font-size: 2.5rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reasons-grid,
+            .team-grid,
+            .members-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* PARTNER GRID MOBILE - 2 KOLOM */
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .partner-logo {
+                width: 140px;
+                height: 80px;
+                padding: 1rem;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .free-badge {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+
+            /* PARTNER GRID MOBILE KECIL */
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .partner-logo {
+                width: 120px;
+                height: 70px;
+                padding: 0.8rem;
+            }
+        }
+
+        /* Desktop specific */
+        @media (min-width: 1024px) {
+            .videos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="gradient-bg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fab fa-tiktok"></i>
+                VIP<span>Agency</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#why-free">Kenapa GRATIS?</a></li>
+                    <li><a href="#team">Tim Kami</a></li>
+                    <li><a href="#videos">Video Sukses</a></li>
+                    <li><a href="#success-members">Member Sukses</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#partners">Partner</a></li>
+                </ul>
+                <button class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-elements">
+            <div class="floating-element"><i class="fab fa-tiktok"></i></div>
+            <div class="floating-element"><i class="fas fa-heart"></i></div>
+            <div class="floating-element"><i class="fas fa-star"></i></div>
+            <div class="floating-element"><i class="fas fa-gem"></i></div>
+            <div class="floating-element"><i class="fas fa-crown"></i></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="free-badge">
+                    <i class="fas fa-crown"></i>
+                    GRATIS 100% - TANPA BIAYA
+                </div>
+                <h1>Agency TikTok Live GRATIS</h1>
+                <p>Gabung agency TikTok Live pertama yang 100% GRATIS tanpa biaya pendaftaran, tanpa biaya bulanan, tanpa hidden cost!</p>
+                <p>Kami percaya kesuksesan harus bisa diakses semua orang</p>
+                <div class="tiktok-badge">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Free Viewer • Free Coaching • Free Support</span>
+                </div>
+                <a href="https://www.tiktok.com/t/ZMhhYfPCA/" class="cta-button" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    Daftar Gratis di TikTok
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Free Section -->
+    <section class="section" id="why-free">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Kenapa Kami GRATIS?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Misi Sosial</h3>
+                    <p>Kami ingin membantu semua creator TikTok meraih kesuksesan tanpa hambatan biaya. Kesempatan harus sama untuk semua orang.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Based</h3>
+                    <p>Kami dibangun oleh komunitas untuk komunitas. Semua saling mendukung dan berkembang bersama.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>No Hidden Cost</h3>
+                    <p>Benar-benar GRATIS 100%. Tidak ada biaya tersembunyi, tidak ada paket berbayar, semuanya free forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Tim Expert Kami</h2>
+            <div class="team-grid">
+                <!-- Vini Fitriyanti -->
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="/images/vini.jpeg" alt="Vini Fitriyanti">
+                        </div>
+                        <div class="member-name">Vini Fitriyanti</div>
+                        <div class="member-role">Founder & CEO</div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-stats">
+                            <div class="stat">
+                                <span class="stat-value">5+</span>
+                                <span class="stat-label">Tahun Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">50+</span>
+                                <span class="stat-label">Streamers Sukses</span>
+                            </div>
+                        </div>
+                        <p class="member-bio">Ex-TikTok algorithm specialist dengan passion membantu creator meraih impian mereka.</p>
+                    </div>
+                </div>
+
+                <!-- Andi -->
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="/images/andi.jpg" alt="Andi">
+                        </div>
+                        <div class="member-name">Andi</div>
+                        <div class="member-role">CEO</div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-stats">
+                            <div class="stat">
+                                <span class="stat-value">10M+</span>
+                                <span class="stat-label">Total Growth</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">100+</span>
+                                <span class="stat-label">Accounts Managed</span>
+                            </div>
+                        </div>
+                        <p class="member-bio">Ahli strategi growth TikTok dengan rekam jejak menaikkan 100+ akun dari 0 ke viral.</p>
+                    </div>
+                </div>
+
+                <!-- Timon Adiyoso -->
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="/images/timon.jpg" alt="Timon Adiyoso">
+                        </div>
+                        <div class="member-name">Timon Adiyoso</div>
+                        <div class="member-role">Content Director</div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-stats">
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">Viral Contents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3+</span>
+                                <span class="stat-label">Tahun Experience</span>
+                            </div>
+                        </div>
+                        <p class="member-bio">Content creator veteran yang paham betul rahasia konten viral di TikTok.</p>
+                    </div>
+                </div>
+
+                <!-- April -->
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="/images/april.jpg" alt="April">
+                        </div>
+                        <div class="member-name">April</div>
+                        <div class="member-role">Content Director</div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-stats">
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">Viral Contents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3+</span>
+                                <span class="stat-label">Tahun Experience</span>
+                            </div>
+                        </div>
+                        <p class="member-bio">Content creator veteran yang paham betul rahasia konten viral di TikTok.</p>
+                    </div>
+                </div>
+
+                <!-- Dafid SEO -->
+                <div class="team-member">
+                    <div class="member-header">
+                        <div class="member-avatar">
+                            <img src="/images/dafid.jpg" alt="Dafid SEO">
+                        </div>
+                        <div class="member-name">Dafid SEO</div>
+                        <div class="member-role">Content Director</div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-stats">
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <span class="stat-label">Viral Contents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3+</span>
+                                <span class="stat-label">Tahun Experience</span>
+                            </div>
+                        </div>
+                        <p class="member-bio">Content creator veteran yang paham betul rahasia konten viral di TikTok.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="section videos-section" id="videos">
+        <div class="container">
+            <h2 class="section-title">Video Sukses Member</h2>
+            <div class="videos-grid">
+                <div class="video-container">
+                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop') center/cover;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">From 0 to 10K Viewer in 1 Week!</div>
+                        <div class="video-stats">
+                            <span>📈 1.2M Views</span>
+                            <span>❤️ 250K Likes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=300&fit=crop') center/cover;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Diamond Strategy That Works</div>
+                        <div class="video-stats">
+                            <span>📈 850K Views</span>
+                            <span>❤️ 180K Likes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <div class="video-placeholder" style="background: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=400&h=300&fit=crop') center/cover;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Going Viral Overnight</div>
+                        <div class="video-stats">
+                            <span>📈 2.5M Views</span>
+                            <span>❤️ 500K Likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Members Section -->
+    <section class="section" id="success-members">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Member Sukses Kami</h2>
+            <div class="members-grid">
+                <!-- Bella Live -->
+                <div class="member-card">
+                    <div class="member-card-header">
+                        <div class="member-card-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face" alt="Bella Live">
+                        </div>
+                        <div class="member-card-name">@BellaLive</div>
+                        <div class="member-card-stats">
+                            <span>2.5M Followers</span>
+                        </div>
+                    </div>
+                    <div class="member-card-info">
+                        <div class="member-growth">
+                            <div class="growth-item">
+                                <span class="growth-value">15K</span>
+                                <span class="growth-label">Avg Viewer</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-value">5M</span>
+                                <span class="growth-label">Diamond/Bulan</span>
+                            </div>
+                        </div>
+                        <p class="member-testimonial">"Dari 0 viewer sampai 15K avg viewer dalam 1 bulan GRATIS! VIP Agency mengubah hidup saya!"</p>
+                    </div>
+                </div>
+
+                <!-- Gaming Pro -->
+                <div class="member-card">
+                    <div class="member-card-header">
+                        <div class="member-card-avatar">
+                            <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face" alt="Gaming Pro">
+                        </div>
+                        <div class="member-card-name">@GamingPro</div>
+                        <div class="member-card-stats">
+                            <span>1.8M Followers</span>
+                        </div>
+                    </div>
+                    <div class="member-card-info">
+                        <div class="member-growth">
+                            <div class="growth-item">
+                                <span class="growth-value">12K</span>
+                                <span class="growth-label">Avg Viewer</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-value">3.8M</span>
+                                <span class="growth-label">Diamond/Bulan</span>
+                            </div>
+                        </div>
+                        <p class="member-testimonial">"Income stabil dari TikTok Live berkat strategi GRATIS dari VIP Agency. Terima kasih!"</p>
+                    </div>
+                </div>
+
+                <!-- Dance Queen -->
+                <div class="member-card">
+                    <div class="member-card-header">
+                        <div class="member-card-avatar">
+                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face" alt="Dance Queen">
+                        </div>
+                        <div class="member-card-name">@DanceQueen</div>
+                        <div class="member-card-stats">
+                            <span>3.2M Followers</span>
+                        </div>
+                    </div>
+                    <div class="member-card-info">
+                        <div class="member-growth">
+                            <div class="growth-item">
+                                <span class="growth-value">20K</span>
+                                <span class="growth-label">Avg Viewer</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-value">8M</span>
+                                <span class="growth-label">Diamond/Bulan</span>
+                            </div>
+                        </div>
+                        <p class="member-testimonial">"VIP Agency mengubah hobi jadi karir yang profitable. Semua GRATIS dan sangat membantu!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Layanan GRATIS Kami</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Viewer GRATIS</h3>
+                    <p>Dapatkan viewer aktif GRATIS selama live streaming untuk meningkatkan engagement dan algoritma</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Diamond Strategy</h3>
+                    <p>Rahasia mendapatkan diamond dan gift maksimal GRATIS tanpa bayar coaching</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Algorithm Boost</h3>
+                    <p>Optimasi algoritma TikTok GRATIS untuk meningkatkan visibilitas live Anda</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Content Plan GRATIS</h3>
+                    <p>Rencana konten khusus GRATIS untuk live streaming yang engaging dan viral</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="section join" id="join">
+        <div class="container">
+            <div class="join-content">
+                <h2>Siap Jadi Bintang TikTok?</h2>
+                <p>Bergabung dengan 500+ member sukses kami yang semuanya GRATIS</p>
+                <a href="https://www.tiktok.com/t/ZMhhYfPCA/" class="cta-button" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    Daftar Sekarang di TikTok
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section - DIPINDAHKAN KE PALING BAWAH -->
+    <section class="section partners-section" id="partners">
+        <div class="container">
+            <h2 class="section-title">Partner Kami</h2>
+            <div class="partners-grid">
+                <!-- VINS Group -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo VINS Group -->
+                    <img src="images/vip.png" alt="VINS Group">
+                </div>
+                
+                <!-- Partner 1 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 1 -->
+                    <img src="images/vip.png" alt="Partner 1">
+                </div>
+                
+                <!-- Partner 2 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 2 -->
+                    <img src="images/vip.png" alt="Partner 2">
+                </div>
+                
+                <!-- Partner 3 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 3 -->
+                    <img src="images/vip.png" alt="Partner 3">
+                </div>
+                
+                <!-- Partner 4 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 4 -->
+                    <img src="images/vip.png" alt="Partner 4">
+                </div>
+                
+                <!-- Partner 5 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 5 -->
+                    <img src="images/vip.png" alt="Partner 5">
+                </div>
+                
+                <!-- Partner 6 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 6 -->
+                    <img src="images/vip.png" alt="Partner 6">
+                </div>
+
+                <!-- Partner 7 -->
+                <div class="partner-logo">
+                    <!-- Ganti dengan logo partner 7 -->
+                    <img src="images/vip.png" alt="Partner 7">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VIP TikTok Agency</h3>
+                    <p>Agency TikTok Live pertama yang 100% GRATIS. Membantu 500+ creator meraih kesuksesan tanpa biaya.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Layanan GRATIS</h3>
+                    <a href="#services">Viewer GRATIS</a>
+                    <a href="#services">Coaching GRATIS</a>
+                    <a href="#services">Strategy GRATIS</a>
+                    <a href="#services">Support GRATIS</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Komunitas</h3>
+                    <a href="#success-members">Member Sukses</a>
+                    <a href="#team">Tim Kami</a>
+                    <a href="#partners">Partner Kami</a>
+                    <a href="#why-free">Kenapa GRATIS?</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 VIP_Agency | TikTok Live GRATIS 100% | Dibuat dengan <span class="heart">❤️</span> oleh Dafid SEO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        navLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.9)';
+                header.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.reason-card, .team-member, .member-card, .service-card, .video-container, .partner-logo').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Dynamic counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-value, .growth-value');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace('+', '').replace('M', '000000').replace('K', '000'));
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target.toLocaleString() + (counter.textContent.includes('M') ? 'M' : counter.textContent.includes('K') ? 'K' : '+');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                    }
+                }, 20);
+            });
+        }
+
+        // Initialize counters when in view
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        counterObserver.observe(document.querySelector('.team'));
+
+        // Floating elements interaction
+        document.addEventListener('mousemove', (e) => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach(element => {
+                const speed = element.getAttribute('data-speed') || 30;
+                const x = (window.innerWidth - e.pageX * speed) / 100;
+                const y = (window.innerHeight - e.pageY * speed) / 100;
+                element.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
