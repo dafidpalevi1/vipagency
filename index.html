@@ -76,6 +76,12 @@
             z-index: 1000;
             border-bottom: 2px solid #667eea;
             backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(10, 10, 10, 0.95);
         }
 
         .nav-container {
@@ -158,7 +164,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            margin-top: -40px; /* Mengangkat konten hero ke atas */
+            margin-top: -40px;
         }
 
         .hero-content h1 {
@@ -339,6 +345,70 @@
             height: 3px;
             background: linear-gradient(45deg, #667eea, #764ba2);
             border-radius: 2px;
+        }
+
+        /* NEW: Performance Metrics Section */
+        .metrics-section {
+            background: rgba(10, 10, 10, 0.9);
+        }
+
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .metric-card:hover::before {
+            left: 100%;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .metric-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #ccc;
+            font-size: 1.1rem;
         }
 
         /* Why Free Section */
@@ -735,123 +805,74 @@
             font-size: 1.1rem;
         }
 
-        /* Join Section */
-        .join {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        /* NEW: Growth Journey Section */
+        .journey-section {
+            background: rgba(10, 10, 10, 0.9);
         }
 
-        .join::before {
+        .journey-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .journey-container::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
-            background-size: cover;
+            left: 50%;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            transform: translateX(-50%);
         }
 
-        .join-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .join h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .join p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            color: white;
-            opacity: 0.9;
-        }
-
-        /* Partner Section */
-        .partners-section {
-            background: rgba(10, 10, 10, 0.9);
-            text-align: center;
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
+        .journey-item {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-items: center;
+            margin-bottom: 4rem;
+            position: relative;
         }
 
-        .partner-logo {
-            width: 180px;
-            height: 100px;
+        .journey-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .journey-content {
+            width: 45%;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .journey-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1.5rem;
-            transition: all 0.3s;
-            border: 1px solid rgba(102, 126, 234, 0.2);
-            backdrop-filter: blur(10px);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .partner-logo:hover {
-            transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        .journey-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
         }
 
-        .partner-logo img {
-            max-width: 100%;
-            max-height: 80px;
-            object-fit: contain;
-            transition: all 0.3s;
-        }
-
-        .partner-logo:hover img {
-            transform: scale(1.1);
-        }
-
-        /* NEW FEATURES */
-        
-        /* Achievement Counter */
-        .achievement-section {
-            background: rgba(10, 10, 10, 0.9);
-            text-align: center;
-        }
-        
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-        
-        .achievement-item {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            border: 1px solid rgba(102, 126, 234, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        
-        .achievement-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-        
-        .achievement-label {
+        .journey-description {
             color: #ccc;
-            font-size: 1.1rem;
+            line-height: 1.6;
         }
-        
+
         /* Testimonial Section */
         .testimonial-section {
             background: rgba(10, 10, 10, 0.9);
@@ -959,6 +980,121 @@
         .faq-answer p {
             color: #ccc;
             line-height: 1.6;
+        }
+
+        /* Join Section */
+        .join {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .join-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .join h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .join p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        /* Partner Section */
+        .partners-section {
+            background: rgba(10, 10, 10, 0.9);
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .partner-logo {
+            width: 180px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+            transition: all 0.3s;
+        }
+
+        .partner-logo:hover img {
+            transform: scale(1.1);
+        }
+
+        /* NEW: Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
         }
 
         /* Footer */
@@ -1082,7 +1218,7 @@
 
             .hero-content h1 {
                 font-size: 2.5rem;
-                margin-top: 20px; /* Mengangkat tulisan VIP Agency di HP */
+                margin-top: 20px;
             }
 
             .section-title {
@@ -1104,6 +1240,31 @@
                 grid-template-columns: 1fr;
             }
 
+            /* NEW SECTIONS MOBILE */
+            .metrics-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            /* JOURNEY MOBILE */
+            .journey-container::before {
+                left: 30px;
+            }
+
+            .journey-item {
+                flex-direction: row !important;
+                margin-bottom: 3rem;
+            }
+
+            .journey-content {
+                width: calc(100% - 100px);
+                margin-left: 80px;
+            }
+
+            .journey-icon {
+                left: 30px;
+            }
+
             /* PARTNER GRID MOBILE - 2 KOLOM */
             .partners-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1114,20 +1275,6 @@
                 width: 140px;
                 height: 80px;
                 padding: 1rem;
-            }
-
-            /* NEW FEATURES MOBILE */
-            .achievement-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-            
-            .achievement-item {
-                padding: 1.5rem;
-            }
-            
-            .achievement-number {
-                font-size: 2.5rem;
             }
             
             .testimonial-grid {
@@ -1163,12 +1310,20 @@
                 height: 45px;
                 font-size: 1.4rem;
             }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
         }
 
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 2rem;
-                margin-top: 30px; /* Mengangkat lebih tinggi di HP kecil */
+                margin-top: 30px;
             }
 
             .section-title {
@@ -1189,6 +1344,15 @@
                 font-size: 1.1rem;
             }
 
+            /* NEW SECTIONS MOBILE SMALL */
+            .metrics-container {
+                grid-template-columns: 1fr;
+            }
+
+            .metric-card {
+                padding: 2rem 1.5rem;
+            }
+
             /* PARTNER GRID MOBILE KECIL */
             .partners-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1199,11 +1363,6 @@
                 width: 120px;
                 height: 70px;
                 padding: 0.8rem;
-            }
-
-            /* NEW FEATURES MOBILE KECIL */
-            .achievement-grid {
-                grid-template-columns: 1fr;
             }
             
             /* FOOTER MOBILE KECIL - TETAP 3 BAGIAN TAPI LEBIH RAPI */
@@ -1249,6 +1408,11 @@
     <!-- Background -->
     <div class="gradient-bg"></div>
 
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container nav-container">
@@ -1258,13 +1422,11 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#why-free">Kenapa GRATIS?</a></li>
+                    <li><a href="#metrics">Performance</a></li>
                     <li><a href="#team">Tim Kami</a></li>
-                    <li><a href="#videos">Video Sukses</a></li>
+                    <li><a href="#videos">Video</a></li>
                     <li><a href="#success-members">Member Sukses</a></li>
                     <li><a href="#services">Layanan</a></li>
-                    <li><a href="#achievements">Pencapaian</a></li>
-                    <li><a href="#testimonials">Testimoni</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#partners">Partner</a></li>
                 </ul>
@@ -1297,6 +1459,43 @@
                     <i class="fab fa-tiktok"></i>
                     Gabung Agency di TikTok
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Performance Metrics Section -->
+    <section class="section metrics-section" id="metrics">
+        <div class="container">
+            <h2 class="section-title">Performance Metrics</h2>
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-value" data-count="500">0</div>
+                    <div class="metric-label">Member Sukses</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="metric-value" data-count="500000">0</div>
+                    <div class="metric-label">Diamond Diperoleh</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <div class="metric-value" data-count="10000">0</div>
+                    <div class="metric-label">Jam Live Streaming</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-value" data-count="50">0</div>
+                    <div class="metric-label">Partner Agency</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1697,32 +1896,60 @@
         </div>
     </section>
 
-    <!-- NEW: Achievement Section -->
-    <section class="section achievement-section" id="achievements">
+    <!-- NEW: Growth Journey Section -->
+    <section class="section journey-section" id="journey">
         <div class="container">
-            <h2 class="section-title">Pencapaian Kami</h2>
-            <div class="achievement-grid">
-                <div class="achievement-item">
-                    <div class="achievement-number" data-count="500">0</div>
-                    <div class="achievement-label">Member Sukses</div>
+            <h2 class="section-title">Growth Journey</h2>
+            <div class="journey-container">
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <h3 class="journey-title">Week 1: Foundation</h3>
+                        <p class="journey-description">
+                            Pelajari dasar-dasar TikTok Live, setup akun yang optimal, dan mulai dengan strategi konten yang tepat.
+                        </p>
+                    </div>
+                    <div class="journey-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
                 </div>
-                <div class="achievement-item">
-                    <div class="achievement-number" data-count="10000">0</div>
-                    <div class="achievement-label">Jam Live Streaming</div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <h3 class="journey-title">Week 2: Engagement</h3>
+                        <p class="journey-description">
+                            Tingkatkan engagement dengan teknik interaksi yang efektif dan bangun komunitas pertama Anda.
+                        </p>
+                    </div>
+                    <div class="journey-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
                 </div>
-                <div class="achievement-item">
-                    <div class="achievement-number" data-count="500000">0</div>
-                    <div class="achievement-label">Diamond Diperoleh</div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <h3 class="journey-title">Week 3: Monetization</h3>
+                        <p class="journey-description">
+                            Mulai monetisasi dengan strategi diamond yang terbukti efektif dan tingkatkan penghasilan.
+                        </p>
+                    </div>
+                    <div class="journey-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
                 </div>
-                <div class="achievement-item">
-                    <div class="achievement-number" data-count="50">0</div>
-                    <div class="achievement-label">Partner Agency</div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <h3 class="journey-title">Week 4: Scaling</h3>
+                        <p class="journey-description">
+                            Skala hasil Anda dengan teknik advanced dan pertahankan momentum pertumbuhan.
+                        </p>
+                    </div>
+                    <div class="journey-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW: Testimonial Section -->
+    <!-- Testimonial Section -->
     <section class="section testimonial-section" id="testimonials">
         <div class="container">
             <h2 class="section-title">Testimoni Member</h2>
@@ -1773,7 +2000,7 @@
         </div>
     </section>
 
-    <!-- NEW: FAQ Section -->
+    <!-- FAQ Section -->
     <section class="section faq-section" id="faq">
         <div class="container">
             <h2 class="section-title">Pertanyaan Umum</h2>
@@ -1967,13 +2194,23 @@
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
+            const backToTop = document.querySelector('.back-to-top');
+            
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-                header.style.backdropFilter = 'blur(20px)';
+                header.classList.add('scrolled');
+                backToTop.classList.add('active');
             } else {
-                header.style.background = 'rgba(10, 10, 10, 0.9)';
-                header.style.backdropFilter = 'blur(20px)';
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('active');
             }
+        });
+
+        // Back to Top Button
+        document.querySelector('.back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Animate elements on scroll
@@ -1992,16 +2229,16 @@
         }, observerOptions);
 
         // Observe all cards and sections
-        document.querySelectorAll('.reason-card, .team-member, .member-card, .service-card, .video-container, .partner-logo, .achievement-item, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.reason-card, .team-member, .member-card, .service-card, .video-container, .partner-logo, .metric-card, .testimonial-card, .journey-content').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
 
-        // Dynamic counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.achievement-number');
+        // Dynamic counter animation for metrics
+        function animateMetrics() {
+            const counters = document.querySelectorAll('.metric-value');
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-count'));
                 let current = 0;
@@ -2019,16 +2256,16 @@
         }
 
         // Initialize counters when in view
-        const counterObserver = new IntersectionObserver((entries) => {
+        const metricsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounters();
-                    counterObserver.unobserve(entry.target);
+                    animateMetrics();
+                    metricsObserver.unobserve(entry.target);
                 }
             });
         });
 
-        counterObserver.observe(document.querySelector('.achievement-section'));
+        metricsObserver.observe(document.querySelector('.metrics-section'));
 
         // FAQ Toggle
         document.querySelectorAll('.faq-question').forEach(question => {
