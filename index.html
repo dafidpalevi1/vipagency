@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Agency - TikTok Live Streaming GRATIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Reset & Base Styles */
         * {
@@ -83,7 +84,6 @@
             align-items: center;
         }
 
-        /* Logo sebagai gambar */
         .logo {
             display: flex;
             align-items: center;
@@ -158,12 +158,13 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            margin-top: -40px; /* Mengangkat konten hero ke atas */
         }
 
         .hero-content h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+            background: linear-gradient(45deg, #eeff00, #d9ff00, #cffd00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% 200%;
@@ -226,10 +227,10 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 0, 0, 0.945);
             padding: 12px 25px;
             border-radius: 25px;
-            border: 1px solid rgba(102, 126, 234, 0.5);
+            border: 1px solid rgb(255, 30, 0);
             margin-bottom: 2rem;
             backdrop-filter: blur(10px);
         }
@@ -444,7 +445,6 @@
             position: relative;
         }
 
-        /* PERBAIKAN: CSS untuk gambar avatar */
         .member-avatar img,
         .member-card-avatar img {
             width: 100%;
@@ -773,7 +773,7 @@
             opacity: 0.9;
         }
 
-        /* Partner Section - DIPERBAIKI */
+        /* Partner Section */
         .partners-section {
             background: rgba(10, 10, 10, 0.9);
             text-align: center;
@@ -807,7 +807,6 @@
             box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
         }
 
-        /* PERBAIKAN UTAMA: Hapus filter yang membuat gambar putih */
         .partner-logo img {
             max-width: 100%;
             max-height: 80px;
@@ -817,6 +816,149 @@
 
         .partner-logo:hover img {
             transform: scale(1.1);
+        }
+
+        /* NEW FEATURES */
+        
+        /* Achievement Counter */
+        .achievement-section {
+            background: rgba(10, 10, 10, 0.9);
+            text-align: center;
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .achievement-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .achievement-label {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            background: rgba(10, 10, 10, 0.9);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-content {
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+        
+        .testimonial-info p {
+            color: #667eea;
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: rgba(10, 10, 10, 0.9);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+        
+        .faq-question {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        
+        .faq-question h3 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        
+        .faq-answer {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #ccc;
+            line-height: 1.6;
         }
 
         /* Footer */
@@ -830,9 +972,10 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
             margin-bottom: 3rem;
+            text-align: left;
         }
 
         .footer-section h3 {
@@ -939,6 +1082,7 @@
 
             .hero-content h1 {
                 font-size: 2.5rem;
+                margin-top: 20px; /* Mengangkat tulisan VIP Agency di HP */
             }
 
             .section-title {
@@ -972,14 +1116,59 @@
                 padding: 1rem;
             }
 
+            /* NEW FEATURES MOBILE */
+            .achievement-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .achievement-item {
+                padding: 1.5rem;
+            }
+            
+            .achievement-number {
+                font-size: 2.5rem;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* FOOTER MOBILE - 3 BAGIAN YANG LEBIH RAPI */
+            .footer-content {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-section h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+
+            /* MEDIA SOSIAL LEBIH KECIL DI HP */
             .social-links {
-                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.4rem;
             }
         }
 
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 2rem;
+                margin-top: 30px; /* Mengangkat lebih tinggi di HP kecil */
             }
 
             .section-title {
@@ -1011,6 +1200,37 @@
                 height: 70px;
                 padding: 0.8rem;
             }
+
+            /* NEW FEATURES MOBILE KECIL */
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* FOOTER MOBILE KECIL - TETAP 3 BAGIAN TAPI LEBIH RAPI */
+            .footer-content {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.8rem;
+            }
+
+            /* MEDIA SOSIAL LEBIH KECIL LAGI DI HP KECIL */
+            .social-links {
+                gap: 0.8rem;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
 
         /* Desktop specific */
@@ -1024,7 +1244,6 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Background -->
@@ -1034,7 +1253,6 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <!-- Ganti dengan gambar logo VIP Agency Anda -->
                 <img src="images/logo.png" alt="VIP Agency" class="logo-img">
             </a>
             <nav>
@@ -1045,6 +1263,9 @@
                     <li><a href="#videos">Video Sukses</a></li>
                     <li><a href="#success-members">Member Sukses</a></li>
                     <li><a href="#services">Layanan</a></li>
+                    <li><a href="#achievements">Pencapaian</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#partners">Partner</a></li>
                 </ul>
                 <button class="mobile-menu">
@@ -1065,18 +1286,12 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <div class="free-badge">
-                    <i class="fas fa-crown"></i>
-                    GRATIS 100% - TANPA BIAYA
-                </div>
                 <h1>VIP Agency</h1>
-                <p>Agensi TikTok LIVE terdiri dari para pakar agensi yang memungkinkan para kreator untuk mewujudkan impian mereka dengan menyediakan strategi yang dipersonalisasi, sesi pembinaan.
-
-                </p>
+                <p>Agensi TikTok LIVE terdiri dari para pakar agensi yang memungkinkan para kreator untuk mewujudkan impian mereka dengan menyediakan strategi yang dipersonalisasi, sesi pembinaan.</p>
                 <p>Kami percaya kesuksesan harus bisa diakses semua orang</p>
                 <div class="tiktok-badge">
                     <i class="fab fa-tiktok"></i>
-                    <span>Free Viewer • Free Coaching • Free Support</span>
+                    <span> GRATIS 100% - TANPA BIAYA</span>
                 </div>
                 <a href="https://www.tiktok.com/t/ZMhhYfPCA/" class="cta-button" target="_blank">
                     <i class="fab fa-tiktok"></i>
@@ -1226,7 +1441,7 @@
                             <img src="/images/dafid.jpg" alt="Dafid SEO">
                         </div>
                         <div class="member-name">Dafid SEO</div>
-                        <div class="member-role">Content Director</div>
+                        <div class="member-role">SEO SPECIALIST</div>
                     </div>
                     <div class="member-info">
                         <div class="member-stats">
@@ -1464,6 +1679,141 @@
                     <h3>Content Plan GRATIS</h3>
                     <p>Rencana konten khusus GRATIS untuk live streaming yang engaging dan viral</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Community Support GRATIS</h3>
+                    <p>Dukungan komunitas GRATIS 24/7 untuk berbagi tips dan strategi dengan member lainnya</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Live Coaching GRATIS</h3>
+                    <p>Sesi coaching langsung GRATIS dengan expert kami untuk meningkatkan performa live streaming Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Achievement Section -->
+    <section class="section achievement-section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Pencapaian Kami</h2>
+            <div class="achievement-grid">
+                <div class="achievement-item">
+                    <div class="achievement-number" data-count="500">0</div>
+                    <div class="achievement-label">Member Sukses</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number" data-count="10000">0</div>
+                    <div class="achievement-label">Jam Live Streaming</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number" data-count="500000">0</div>
+                    <div class="achievement-label">Diamond Diperoleh</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number" data-count="50">0</div>
+                    <div class="achievement-label">Partner Agency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Testimonial Section -->
+    <section class="section testimonial-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimoni Member</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Dulu saya cuma punya 10-20 viewer setiap live, setelah ikut VIP Agency sekarang bisa sampai 1000+ viewer! Penghasilan dari diamond juga meningkat drastis. Terima kasih VIP Agency!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/images/mita.jpeg" alt="Member 1">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>@smart_woman14</h4>
+                            <p>Creator TikTok</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Strategi dari VIP Agency benar-benar bekerja! Dalam 2 minggu follower saya naik 10K dan diamond yang saya dapatkan meningkat 5x lipat. Semua GRATIS, luar biasa!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/images/licha.jpeg" alt="Member 2">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>@lichar45</h4>
+                            <p>Gaming Streamer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Saya awalnya ragu karena gratis, tapi ternyata VIP Agency serius membantu membernya. Coachingnya detail, supportnya 24 jam. Sekarang saya bisa full-time dari TikTok!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/images/bu_qori2.jpeg" alt="Member 3">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>@bu_qori2</h4>
+                            <p>Live Streamer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan Umum</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Benarkah VIP Agency benar-benar GRATIS 100%?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, benar! VIP Agency 100% GRATIS tanpa biaya pendaftaran, tanpa biaya bulanan, tanpa biaya tersembunyi apapun. Kami berkomitmen membantu creator TikTok meraih kesuksesan tanpa hambatan finansial.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara bergabung dengan VIP Agency?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cukup klik tombol "Gabung Agency di TikTok" di website ini, ikuti petunjuk pendaftaran, dan Anda akan langsung menjadi bagian dari komunitas VIP Agency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah ada syarat khusus untuk bergabung?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Syaratnya sederhana: memiliki akun TikTok aktif, semangat untuk belajar dan berkembang, serta komitmen untuk konsisten live streaming minimal 3-4 kali seminggu.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama proses pendaftaran?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Proses pendaftaran hanya membutuhkan waktu 5-10 menit. Setelah mendaftar, Anda akan langsung mendapatkan akses ke semua materi dan komunitas VIP Agency.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1482,68 +1832,58 @@
         </div>
     </section>
 
-    <!-- Partner Section - DIPERBAIKI -->
+    <!-- Partner Section -->
     <section class="section partners-section" id="partners">
         <div class="container">
             <h2 class="section-title">Partner Kami</h2>
             <div class="partners-grid">
                 <!-- VINS Group -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo VINS Group -->
                     <img src="images/vin.png" alt="VINS Group">
                 </div>
                 
                 <!-- Partner 1 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 1 -->
                     <img src="images/vmf.png" alt="Partner 1">
                 </div>
                 
                 <!-- Partner 2 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 2 -->
                     <img src="images/mvf.png" alt="Partner 2">
                 </div>
                 
                 <!-- Partner 3 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 3 -->
                     <img src="images/vip.png" alt="Partner 3">
                 </div>
                 
                 <!-- Partner 4 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 4 -->
                     <img src="images/vca.png" alt="Partner 4">
                 </div>
                 
                 <!-- Partner 5 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 5 -->
                     <img src="images/vem.png" alt="Partner 5">
                 </div>
                 
                 <!-- Partner 6 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 6 -->
                     <img src="images/vthi.png" alt="Partner 6">
                 </div>
 
                 <!-- Partner 7 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 7 -->
                     <img src="images/mvm.png" alt="Partner 7">
                 </div>
 
                 <!-- Partner 8 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 8 -->
                     <img src="images/vom.png" alt="Partner 8">
                 </div>
 
                 <!-- Partner 9 -->
                 <div class="partner-logo">
-                    <!-- Ganti dengan logo partner 9 -->
                     <img src="images/hvs.png" alt="Partner 9">
                 </div>
             </div>
@@ -1652,7 +1992,7 @@
         }, observerOptions);
 
         // Observe all cards and sections
-        document.querySelectorAll('.reason-card, .team-member, .member-card, .service-card, .video-container, .partner-logo').forEach(el => {
+        document.querySelectorAll('.reason-card, .team-member, .member-card, .service-card, .video-container, .partner-logo, .achievement-item, .testimonial-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
@@ -1661,15 +2001,15 @@
 
         // Dynamic counter animation
         function animateCounters() {
-            const counters = document.querySelectorAll('.stat-value, .growth-value');
+            const counters = document.querySelectorAll('.achievement-number');
             counters.forEach(counter => {
-                const target = parseInt(counter.textContent.replace('+', '').replace('M', '000000').replace('K', '000'));
+                const target = parseInt(counter.getAttribute('data-count'));
                 let current = 0;
                 const increment = target / 100;
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        counter.textContent = target.toLocaleString() + (counter.textContent.includes('M') ? 'M' : counter.textContent.includes('K') ? 'K' : '+');
+                        counter.textContent = target.toLocaleString();
                         clearInterval(timer);
                     } else {
                         counter.textContent = Math.floor(current).toLocaleString();
@@ -1688,7 +2028,20 @@
             });
         });
 
-        counterObserver.observe(document.querySelector('.team'));
+        counterObserver.observe(document.querySelector('.achievement-section'));
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                
+                // Rotate chevron icon
+                const icon = question.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
 
         // Floating elements interaction
         document.addEventListener('mousemove', (e) => {
